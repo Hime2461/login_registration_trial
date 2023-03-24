@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:login_registration_trial/src/features/authentication/controllers/tap_controller.dart';
+import 'package:login_registration_trial/src/features/home/authentication/tap_controller_y.dart';
+//import 'package:login_registration_trial/src/features/home/controllers/tap_controller.dart';
 
-class ValueOfX extends StatelessWidget {
-  const ValueOfX({Key? key}) : super(key: key);
+class ValueOfY extends StatelessWidget {
+  const ValueOfY({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    TapController tapController=Get.find();
+    TapControllerY tapController=Get.find();
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            GetBuilder<TapController>(builder: (_) {
-              return Text("Hi, I can access x too, and it's value currently is: " + tapController.x.toString());
+            GetBuilder<TapControllerY>(builder: (_) {
+              return Text("Hi, I can access y too, and it's value currently is: " + tapController.y.toString());
             }),
             ElevatedButton(
               onPressed: () {
@@ -26,7 +27,7 @@ class ValueOfX extends StatelessWidget {
               onPressed: () {
                 Get.back();
               },
-              child: Text("Return"),
+              child: Text("Go back"),
             )
           ],
         ),
