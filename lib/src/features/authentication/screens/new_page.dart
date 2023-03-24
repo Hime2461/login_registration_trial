@@ -20,7 +20,7 @@ class ValueOfX extends StatelessWidget {
               onPressed: () {
                 tapController.decrease();
               },
-              child: Text("Decrease"),
+              child: Text("Minus"),
             ),
             ElevatedButton(
               onPressed: () {
